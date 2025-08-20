@@ -1,16 +1,40 @@
-# encryption
+# 🔐 Crypto Tool (Flutter)
 
-A new Flutter project.
+A simple Flutter app for generating SHA-256 signatures and encrypting data using AES-GCM.
 
-## Getting Started
+Includes a clean UI with:
+- ✅ Multi-line expandable input field
+- ✅ Buttons to generate signature and encrypt data
+- ✅ Display of signature, encrypted, and decrypted data
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- AES-GCM encryption/decryption (256-bit key)
+- SHA-256 signature generation
+- Base64 + URL encoding
+- Responsive Flutter UI
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🧱 Tech Used
+
+- Flutter
+- `pointycastle` for AES-GCM encryption
+- `crypto` for SHA-256 hashing
+- `dart:convert` for encoding
+
+---
+
+## 🏁 Getting Started
+
+1. **Clone the repository**
+2. **Add your secrets** in a file called `app_secrets.dart`:
+   ```dart
+   class AppSecrets {
+     static const clientId = 'your-client-id';
+     static const clientSecret = 'your-client-secret';
+     static const aesKey = 'base64-encoded-256-bit-key';
+     static const aesIV = 'base64-encoded-12-byte-iv';
+   }
